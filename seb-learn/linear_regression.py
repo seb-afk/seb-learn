@@ -2,7 +2,7 @@ import numpy as np
 
 
 class LinearRegression(object):
-    """ Least square linear regression implementation.
+    """ Ordinary least square linear regression implementation.
 
     Attributes
     ----------
@@ -20,14 +20,14 @@ class LinearRegression(object):
     def __init__(self):
         self.weights_ = None
 
-    def fit(self, x_mat, y_vec):
-        """Fit linear regression weights.
+    def fit(self, xb_mat, y_vec):
+        """Analytic solution for linear regression.
 
         Parameters
         ----------
 
         x_mat: d-dimensional array, shape = [number_samples, number_features]
-            Feature vectors stacked in a matrix.
+            Feature vectors horizontally stacked.
 
         y_vec: 1d-array, shape = [n_samples]
             Target vector.
@@ -39,9 +39,9 @@ class LinearRegression(object):
 
         """
         # Add x0 = 1 to compute bias term w0
-        x_mat = np.hstack([np.full((x_mat.shape[0],1), 1, dtype="float64"),
-                           x_mat])
-        self.weights_ = np.dot(np.linalg.pinv(x_mat), y_vec)
+        xb_mat = np.hstack([np.full((xb_mat.shape[0],1), 1, dtype="float64"),
+                           xb_mat])
+        self.weights_ = np.dot(np.linalg.pinv(xb_mat), y_vec)
         return None
 
     def predict(self, x_mat):
@@ -61,6 +61,3 @@ class LinearRegression(object):
 
         """
         return np.dot(x_mat, self.weights_[1:]) + self.weights_[0]
-
-
-
