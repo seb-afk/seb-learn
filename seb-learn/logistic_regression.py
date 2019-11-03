@@ -87,8 +87,6 @@ class LogisticRegression(object):
             # Calcultate the cost and append
             cost = (-y_vec.dot(np.log(output)) - ((1 - y_vec).dot(np.log(1 - output))))
             self.cost_.append(cost)
-
-
         return self
 
     def predict(self, x_mat):
