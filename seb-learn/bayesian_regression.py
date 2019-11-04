@@ -50,7 +50,7 @@ class BayesianRegression(object):
         self.prior_precision_ = prior_precision
         self.likelihood_precision_ = likelihood_precision
         self.posterior_covariance_ = (
-            np.linalg.inv(prior_precision +
+            np.linalg.inv(prior_precision * np.identity(xb_mat.shape[1]) +
                           (likelihood_precision * xb_mat.T.dot(xb_mat))))
         self.posterior_mean_ = (
             np.ravel(likelihood_precision *
@@ -81,7 +81,7 @@ class BayesianRegression(object):
         xb_mat = np.hstack([np.full((x_mat.shape[0], 1), 1, dtype="float64"),
                            x_mat])
         self.predictive_variance_ = (
-                1/self.likelihood_precision_ +
+                1/self.likelihood_precision_ * np.identity(xb_mat.shape[0]) +
                 xb_mat.dot(self.posterior_covariance_.dot(xb_mat.T)))
         if method == "map":
             self.predictive_mean_ = self.posterior_mean_.dot(xb_mat.T)
