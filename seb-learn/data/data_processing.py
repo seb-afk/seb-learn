@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def create_design_matrix(n_order, x):
     """Transforms a feature vector into a design matrix 
     (nth order polynomial).

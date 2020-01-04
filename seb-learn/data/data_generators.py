@@ -30,7 +30,7 @@ def gen_sinusoidal(n, seed=None, sdev=0.2):
     return x, t
 
 
-def gen_sinusoidal_norm(n, seed=None, sdev=0.2, ):
+def gen_sinusoidal_norm(n, seed=None, sdev=0.2):
     """ Generates sinusoidal data with random noise added to it.
         xi's are drawn from a uniform distribution.
 
