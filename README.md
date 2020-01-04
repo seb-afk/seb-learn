@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/sebastianbertoli/seb-learn.svg?branch=master)](https://travis-ci.com/sebastianbertoli/seb-learn)
+![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)
 # seb-learn
 
 WORK IN PROGRESS
