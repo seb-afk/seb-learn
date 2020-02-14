@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d3b8542d0b174e4fafdb4f8c0a6e08e1)](https://app.codacy.com/manual/sebastianbertoli/seb-learn?utm_source=github.com&utm_medium=referral&utm_content=sebastianbertoli/seb-learn&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.com/sebastianbertoli/seb-learn.svg?branch=master)](https://travis-ci.com/sebastianbertoli/seb-learn)
 ![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)
 # seb-learn(s)
